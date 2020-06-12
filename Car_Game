@@ -1,0 +1,27 @@
+start_flag=False
+while True:
+            entered_command = input('> ').lower()
+            if entered_command == 'help':
+                print('''
+                       start = To start the Car
+                       stop  = To stop the Car
+                       exit  = To exit                  
+                      ''')
+            elif entered_command == 'start':
+                    if start_flag==False:
+                        start_flag=True
+                        print('Car has been started')
+                    else:print('Car already started')
+                    continue
+            elif entered_command == 'stop':
+                if start_flag==True:
+                    start_flag=False
+                    print('Car has stopped')
+                else:print('Car already stopped')
+                continue
+            elif entered_command =='quit':
+             print('Car game is over you are exiting ....')
+             break
+            else:
+             print('Sorry I do not understand you')
+             continue
